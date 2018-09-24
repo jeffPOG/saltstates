@@ -2,5 +2,5 @@ base:
   '*':
     - users.init
 
-  'Jeff-Web*':
+  'Jeff-Web-01':
     - apache
