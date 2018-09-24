@@ -1,6 +1,6 @@
 base:
   '*':
-    - users.base_users 
+    - users
 
   'Jeff-Web-01':
     - apache
