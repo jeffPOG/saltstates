@@ -1,6 +1,6 @@
 base:
   '*':
-    - users
+    - users.init
 
   'Jeff-Web*':
     - apache
