@@ -13,4 +13,4 @@ kat_Douglas_key:
   ssh_auth.present:
     - name: kat.douglas
     - user: kat.douglas
-    - source: salt://users/keys/kat.douglas.pub
+    - source: salt://dev/users/keys/kat.douglas.pub
