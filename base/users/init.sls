@@ -1,16 +1,15 @@
-user_jeff_sikala:
+{% for user, data in pillar.get('admin_users', {}).items() %}
+user_{{ user }}:
   user.present:
-    - name: jeff.sikala
-    - fullname: Jeff Sikala
-    - shell: /bin/bash
-    - home: /home/jeff.sikala
-    - uid: 1993
-    - gid_from_name: True
-    - groups:
-      - wheel
+    - name: {{ user }}
+    - fullname {{ data['fullname'] }}
+    - shell: {{ data['shell'] }}
+    - home: {{ data['home'] }}
+    - uid: {{ data['uid'] }}
+    - gid_from_name: {{ data['gid_from_name'] }}
+    - groups: {{ data['groups'] }}
 
-jeff_sikala_key:
+{{ user }}_key:
   ssh_auth.present:
-    - name: jeff.sikala
-    - user: jeff.sikala
-    - source: salt://users/keys/jeff.sikala.pub
+    - name: {{ data['ssh_key'] }}
+    - user: {{ user }}
