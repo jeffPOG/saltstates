@@ -2,6 +2,7 @@ admin_users:
   jeff.sikala:
     fullname: Jeff Sikala
     shell: /bin/bash
+    home: /home/jeff.sikala
     uid: 1993
     gid_from_name: true
     groups:
@@ -10,6 +11,7 @@ admin_users:
   jose.smith:
     fullname: Joseph Smith
     shell: /bin/bash
+    home: /home/jose.smith
     uid: 10001
     gid_from_name: true
     groups:
@@ -18,6 +20,7 @@ admin_users:
   dan.shiplett:
     fullname: Daniel Shiplett
     shell: /bin/bash
+    home: /home/dan.shiplett
     uid: 10002
     gid_from_name: true
     groups: []
@@ -25,6 +28,7 @@ admin_users:
   evan.gramens:
     fullname: Evan Gramens
     shell: /bin/bash
+    home: /home/evan.gramens
     uid: 10003
     gid_from_name: true
     groups: []
