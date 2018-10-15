@@ -2,7 +2,7 @@
 user_{{ user }}:
   user.present:
     - name: {{ user }}
-    - fullname {{ data['fullname'] }}
+    - fullname: {{ data['fullname'] }}
     - shell: {{ data['shell'] }}
     - home: {{ data['home'] }}
     - uid: {{ data['uid'] }}
