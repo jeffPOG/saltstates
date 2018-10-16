@@ -3,4 +3,4 @@ base:
     - users
 
   'Jeff-Web*':
-    - apache
+    - install_apache
