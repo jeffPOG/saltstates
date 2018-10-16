@@ -2,5 +2,5 @@ base:
   '*':
     - users
 
-  'Jeff-Web*':
+  'Jeff-web*':
     - apache
