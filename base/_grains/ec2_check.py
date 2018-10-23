@@ -6,12 +6,12 @@ def ec2_check():
 
     # Instantiate grains dictionary
     grains = {}
-
+ try:
     # Instantiate grains key cloud info
     grains['cloud_info'] = []
 
     # Sets the Base url for base
-    base_url = 'http://169.254.169.254/latest/meta-data'
+    base_url = 'http://169.254.169.254/latest/meta-data/'
 
     instance_id = urllib2.urlopen(base_url + '/instance-id')
     instance_type = urllib2.urlopen(base_url + 'instance-type')
@@ -24,6 +24,8 @@ def ec2_check():
     grains['cloud_info'][0]['instance_id'] = instance_id
     grains['cloud_info'][0]['instance_type'] = instance_type
     return grains
+    except urllib2.URLError:
+        return False
 
 if __name__== '__main__':
     ec2_check()
