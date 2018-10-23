@@ -7,7 +7,7 @@ def ec2_check():
     # Instantiate grains dictionary
     grains = {}
 
- try:
+  try:
      # Instantiate grains key cloud info
      grains['cloud_info'] = []
 
