@@ -6,7 +6,7 @@ def ec2_check():
 
     # Instantiate grains dictionary
     grains = {}
- #try:
+    try:
     # Instantiate grains key cloud info
     grains['cloud_info'] = []
 
@@ -25,8 +25,8 @@ def ec2_check():
     grains['cloud_info'][0]['instance_type'] = instance_type
     #print grains
     return grains
-    #except urllib2.URLError:
-        #return False
+    except urllib2.URLError:
+        return False
 
 if __name__== '__main__':
     ec2_check()
